@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEHANCE</title>
+    <link rel = "stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" style="color: aliceblue;">Behance</a>
+          </div>
+          
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="login.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <section id="store" class="store py-5">
+        <div class="container">
+            <div class="row">
+              <div class="col-10 col-sm-6 col-sm-offset-3 text-center">
+                <h1 class="text-uppercase"><strong class="banner-title">Showcase Your Work</strong></h1>
+                <h4>Join Behance, the world's largest creative network</h4>
+              </div>
+            </div>
+    
+            <div class="row">
+              <div class="col-lg-8 col-lg-offset-2 text-center">
+                <a href="#" class="btn btn-default btn-black text-uppercase filter-btn" data-filter="all"id="filterbox">all</a>
+
+                <a href="#" class="btn btn-default btn-black text-uppercase filter-btn" data-filter="Projects"id="filterbox">Projects</a>
+
+                <a href="#" class="btn btn-default btn-black text-uppercase filter-btn" data-filter="Assets"id="filterbox">Assets</a>
+                
+                <a href="#" class="btn btn-default btn-black text-uppercase filter-btn" data-filter="Images"id="filterbox">Images</a>
+
+                <a href="#" class="btn btn-default btn-black text-uppercase filter-btn" data-filter="Prototypes"id="filterbox">Prototypes</a>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-md-6 col-md-offset-3 mx-auto">
+                  <form>
+                      <div class="input-group">
+                          <span class="input-group-addon search-box" id="search-icon">
+                              <i class="fa fa-search search-icon-color"></i>
+                          </span>
+                          <input type="text" class="form-control" placeholder="Search" aria-describedby="search-icon"id="search-item">
+                      </div>
+                  </form>
+              </div>
+          </div>
+          <br>
+          <div class="row text-center" id="store-items">
+            <!-- First Card -->
+            <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-0 mx-auto my-3 store-item Images"data-item="Images">
+                <div class="panel panel-default">
+                    <div class="panel-heading" data-toggle="modal" data-target="#itemModal" onclick="openModal('AVVA logo - Brand Identity<', 'images/i1.png', 'Avva mobile is shaping the future of mobile technology')">
+                        <h3 class="panel-title">AVVA logo - Brand Identity</h3>
+                      </div>
+                    <div class="panel-body">
+                        <div class="thumbnail">
+                            <div class="img-container position-relative">
+                                <img src="images/i1.png" class="img-responsive center-block store-img" alt="Sweet Image">
+                                <button class="btn btn-primary btn-sm store-like-button" onclick="likeButtonClicked(this)">
+                                    <i class="fa fa-heart"></i> Like <span class="like-count" id="like-count">0</span>
+                                </button>
+                            </div>
+                        </div>
+                        <p class="text-center" id="store-item-name">Mutiple Owners<br> October 23rd 2023</p>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Second Card -->
+            <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-0 mx-auto my-3 store-item Assets" data-item="Assets">
+                <div class="panel panel-default">
+                    <div class="panel-heading" data-toggle="modal" data-target="#itemModal" onclick="openModal('Life in the mountains - Fujifilm X100V', 'images/a1.png', '3 days in Kranjska Gora, Slovenia & Laghi di Fusine, Italy.July 2023 shot on FUJIFILM X100V')">
+                        <h3 class="panel-title">Life in the mountains - Fujifilm X100V</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="thumbnail">
+                            <div class="img-container position-relative">
+                                <img src="images/a1.png" class="img-responsive center-block store-img" alt="Another Sweet Image">
+                                <button class="btn btn-primary btn-sm store-like-button" onclick="likeButtonClicked(this)">
+                                    <i class="fa fa-heart"></i> Like <span class="like-count" id="like-count">0</span>
+                                </button>
+                            </div>
+                        </div>
+                        <p class="text-center" id="store-item-name">Viktor Juric<br>Published: August 28th 2023</p>
+                    </div>
+                </div>
+            </div>
+
+           <!-- Third Card -->
+           <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-0 mx-auto my-3 store-item Projects"data-item="Projects">
+            <div class="panel panel-default">
+                <div class="panel-heading" data-toggle="modal" data-target="#itemModal" onclick="openModal('GUEST ROOM DESIGN', 'images/p1.png', 'UNION PARK residential, complex Location: Moscow, Russian Federation Function: guest room (16 sq.m.), Total space: 120 sq.m, Project year: 2023, Project team: Anna Nedugova')">
+                    <h3 class="panel-title">Guest Room Design</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="thumbnail">
+                        <div class="img-container position-relative">
+                            <img src="images/p1.png" class="img-responsive center-block store-img" alt="Another Sweet Image">
+                            <button class="btn btn-primary btn-sm store-like-button" onclick="likeButtonClicked(this)">
+                                <i class="fa fa-heart"></i> Like <span class="like-count" id="like-count">0</span>
+                            </button>
+                        </div>
+                    </div>
+                    <p class="text-center" id="store-item-name">Project year: 2023<br>Project team: Anna Nedugova</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- fourth Card -->
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-0 mx-auto my-3 store-item Prototypes"data-item="Prototypes">
+            <div class="panel panel-default">
+                <div class="panel-heading" data-toggle="modal" data-target="#itemModal" onclick="openModal('Disney+, But Better.', 'images/pr1.png', 'Disney+ is a streaming service where you can watch movies, series, and originals from Disney, Pixar, Marvel, Star Wars, Nat Geo, and more.')">
+                    <h3 class="panel-title">Disney+, But Better</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="thumbnail">
+                        <div class="img-container position-relative">
+                            <img src="images/pr1.png" class="img-responsive center-block store-img" alt="Another Sweet Image">
+                            <button class="btn btn-primary btn-sm store-like-button" onclick="likeButtonClicked(this)">
+                                <i class="fa fa-heart"></i> Like <span class="like-count" id="like-count">0</span>
+                            </button>
+                        </div>
+                    </div>
+                    <p class="text-center" id="store-item-name">Andre Carioca<br> April 16th 2022</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- fifth Card -->
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-0 mx-auto my-3 store-item Images"data-item="Images">
+            <div class="panel panel-default">
+                <div class="panel-heading" data-toggle="modal" data-target="#itemModal" onclick="openModal('Talking Sign', 'images/i2.png.png', 'It is used to express affection or intense approval for someone or something and kind of “rock on!” enthusiasm where they could use the more rock n roll emoji, the sign of the horns.')">
+                    <h3 class="panel-title">Talking Sign</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="thumbnail">
+                        <div class="img-container position-relative">
+                            <img src="images/i2.png.png" class="img-responsive center-block store-img" alt="Sweet Image">
+                            <button class="btn btn-primary btn-sm store-like-button" onclick="likeButtonClicked(this)">
+                                <i class="fa fa-heart"></i> Like <span class="like-count" id="like-count">0</span>
+                            </button>
+                        </div>
+                    </div>
+                    <p class="text-center" id="store-item-name">Ansar Muhammad<br>July 16th 2020</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- sixth Card -->
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-0 mx-auto my-3 store-item Assets" data-item="Assets">
+            <div class="panel panel-default">
+                <div class="panel-heading" data-toggle="modal" data-target="#itemModal" onclick="openModal('Fresco Halloween 2023 Coloring Page', 'images/a2.png.png', 'Im only fully dressed if I have a wand.Wicked cute.')">
+                    <h3 class="panel-title">Fresco Halloween 2023 Coloring Page</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="thumbnail">
+                        <div class="img-container position-relative">
+                            <img src="images/a2.png.png" class="img-responsive center-block store-img" alt="Another Sweet Image">
+                            <button class="btn btn-primary btn-sm store-like-button" onclick="likeButtonClicked(this)">
+                                <i class="fa fa-heart"></i> Like <span class="like-count" id="like-count">0</span>
+                            </button>
+                        </div>
+                    </div>
+                    <p class="text-center" id="store-item-name">Matthew Carlson<br>August 20th 2023</p>
+                </div>
+            </div>
+        </div>
+
+         <!-- Seventh Card -->
+         <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-0 mx-auto my-3 store-item Projects"data-item="Projects">
+            <div class="panel panel-default">
+                <div class="panel-heading" data-toggle="modal" data-target="#itemModal" onclick="openModal('SaaS Dashboard: Elevating User Experience Dashboard', 'images/p2.png', 'Effortlessly Elegant Admin Dashboard Design, Choosing a visually appealing yet functional color scheme and typography can greatly enhance the dashboard aesthetics and readability.')">
+                    <h3 class="panel-title">SaaS Dashboard: Elevating User Experience Dashboard</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="thumbnail">
+                        <div class="img-container position-relative">
+                            <img src="images/p2.png" class="img-responsive center-block store-img" alt="Another Sweet Image">
+                            <button class="btn btn-primary btn-sm store-like-button" onclick="likeButtonClicked(this)">
+                                <i class="fa fa-heart"></i> Like <span class="like-count" id="like-count">0</span>
+                            </button>
+                        </div>
+                    </div>
+                    <p class="text-center" id="store-item-name">Mutiple Owners</p>
+                </div>
+            </div>
+        </div>
+
+         <!-- eight Card -->
+         <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-0 mx-auto my-3 store-item Prototypes"data-item="Prototypes">
+            <div class="panel panel-default">
+                <div class="panel-heading" data-toggle="modal" data-target="#itemModal" onclick="openModal('Bakery Paradise App UX/UI Case Study', 'images/pr2.png', 'UX case studies tell a curated story or journey of your design. It explains the “who, what, when, where, and how” of your design. The text should be short and sweet but also walk the reader through the thinking behind the design and the outcome of it')">
+                    <h3 class="panel-title">Bakery Paradise App UX/UI Case Study</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="thumbnail">
+                        <div class="img-container position-relative">
+                            <img src="images/pr2.png" class="img-responsive center-block store-img" alt="Another Sweet Image">
+                            <button class="btn btn-primary btn-sm store-like-button" onclick="likeButtonClicked(this)">
+                                <i class="fa fa-heart"></i> Like <span class="like-count" id="like-count">0</span>
+                            </button>
+                        </div>
+                    </div>
+                    <p class="text-center" id="store-item-name">Filip Rygucki<br>February 1st 2022</p>
+                </div>
+            </div>
+        </div>
+
+         <!-- 9 Card -->
+         <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-0 mx-auto my-3 store-item Images"data-item="Images">
+            <div class="panel panel-default">
+                <div class="panel-heading" data-toggle="modal" data-target="#itemModal" onclick="openModal('Roots Paysages Brand Design', 'images/i3.png', 'visual identity for Roots PaysagesAn uplifted brand territory for the landscape specialistRoots Paysages creates landscaping and works with individuals.')">
+                    <h3 class="panel-title">Roots Paysages Brand Design</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="thumbnail">
+                        <div class="img-container position-relative">
+                            <img src="images/i3.png" class="img-responsive center-block store-img" alt="Sweet Image">
+                            <button class="btn btn-primary btn-sm store-like-button" onclick="likeButtonClicked(this)">
+                                <i class="fa fa-heart"></i> Like <span class="like-count" id="like-count">0</span>
+                            </button>
+                        </div>
+                    </div>
+                    <p class="text-center" id="store-item-name">Graphéine<br>February 26th 2019</p>
+                </div>
+            </div>
+        </div>
+
+          <!-- 10 Card -->
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-0 mx-auto my-3 store-item Assets" data-item="Assets">
+            <div class="panel panel-default">
+                <div class="panel-heading" data-toggle="modal" data-target="#itemModal" onclick="openModal('BRICKS Geometric Patterns', 'images/a3.png', 'Explore · Art. group of people standing in front of a brick wall with red and green bricks')">
+                    <h3 class="panel-title">BRICKS Geometric Patterns</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="thumbnail">
+                        <div class="img-container position-relative">
+                            <img src="images/a3.png" class="img-responsive center-block store-img" alt="Another Sweet Image">
+                            <button class="btn btn-primary btn-sm store-like-button" onclick="likeButtonClicked(this)">
+                                <i class="fa fa-heart"></i> Like <span class="like-count" id="like-count">0</span>
+                            </button>
+                        </div>
+                    </div>
+                    <p class="text-center" id="store-item-name">Kake Anto<br>July 14th 2023</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 11 Card -->
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-0 mx-auto my-3 store-item Prototypes"data-item="Prototypes">
+            <div class="panel panel-default">
+                <div class="panel-heading" data-toggle="modal" data-target="#itemModal" onclick="openModal('ION', 'images/pr3.jpg', 'ION Trading Finance Limited provides financial technology solutions. The Company offers software as a service platform used for trading, position management, pricing, risk management, foreign exchange core banking, market analysis, and downstream processing.')">
+                    <h3 class="panel-title">ION</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="thumbnail">
+                        <div class="img-container position-relative">
+                            <img src="images/pr3.jpg" class="img-responsive center-block store-img" alt="Another Sweet Image">
+                            <button class="btn btn-primary btn-sm store-like-button" onclick="likeButtonClicked(this)">
+                                <i class="fa fa-heart"></i> Like <span class="like-count" id="like-count">0</span>
+                            </button>
+                        </div>
+                    </div>
+                    <p class="text-center" id="store-item-name">Mutiple Owners<br>January 2nd 2019</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 12 Card -->
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-0 mx-auto my-3 store-item Projects"data-item="Projects">
+            <div class="panel panel-default">
+                <div class="panel-heading" data-toggle="modal" data-target="#itemModal" onclick="openModal('Leon Business Powerpoint', 'images/p3.png', 'Modern Business Presentation, Simple, and Flexible Presentation Template With Slidemaster. Perfect For Startup, Business , Corporate Presentation and personal use. Very easy to change the color schemes. Fully Complete Presentation with Slidemaster & Devices Mockup.')">
+                    <h3 class="panel-title">Leon Business Powerpoint</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="thumbnail">
+                        <div class="img-container position-relative">
+                            <img src="images/p3.png" class="img-responsive center-block store-img" alt="Another Sweet Image">
+                            <button class="btn btn-primary btn-sm store-like-button" onclick="likeButtonClicked(this)">
+                                <i class="fa fa-heart"></i> Like <span class="like-count" id="like-count">0</span>
+                            </button>
+                        </div>
+                    </div>
+                    <p class="text-center" id="store-item-name">Kimberlyam Olopez</p>
+                </div>
+            </div>
+        </div>
+
+        </div>
+        
+              
+        
+        </div>
+    </section>
+
+    
+<!-- Bootstrap Modal -->
+<div class="modal fade" id="itemModal" tabindex="-1" role="dialog" aria-labelledby="itemModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="itemModalLabel">Modal Title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Modal Content Goes Here -->
+                <img id="modalImage" class="img-responsive center-block" alt="Modal Image">
+                <p id="modalMessage" class="text-center"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+  
+</body>
+</html>
+
+<script>
+    // Function to open the modal and populate content
+    function openModal(title, imageUrl, message) {
+        const modalTitleElement = document.getElementById('itemModalLabel');
+        const modalImageElement = document.getElementById('modalImage');
+        const modalMessageElement = document.getElementById('modalMessage');
+
+        modalTitleElement.innerText = title;
+        modalImageElement.src = imageUrl;
+        modalMessageElement.innerText = message;
+    }
+</script>
+
+<script>
+
+// Function to handle like button click
+function likeButtonClicked(button) {
+        // Assuming the like count is stored in the span with class 'like-count'
+        const likeCountElement = button.querySelector('.like-count');
+        
+        // Get the current like count from the element
+        let currentLikeCount = parseInt(likeCountElement.innerText);
+
+        // Increment the like count
+        currentLikeCount++;
+
+        // Update the like count in the element
+        likeCountElement.innerText = currentLikeCount;
+    }
+
+    
+    (function () {
+        const buttons = document.querySelectorAll('#filterbox');
+        const storeItems = document.querySelectorAll('.store-item');
+
+        buttons.forEach((button) => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                const filter = e.target.dataset.filter;
+
+                storeItems.forEach((item) => {
+                    if (filter === 'all') {
+                        item.style.display = 'block';
+                    } else {
+                        if (item.classList.contains(filter)) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    }
+                });
+            });
+        });
+    })();
+
+(function () {
+            const searchbox = document.querySelector('#search-item');
+            const storeItems = document.querySelectorAll('.store-item');
+
+            searchbox.addEventListener('keyup', (e) => {
+                const searchFilter = e.target.value.toLowerCase().trim();
+
+                storeItems.forEach((item) => {
+                    if (item.textContent.toLowerCase().includes(searchFilter)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        })();
+
+
+        
+</script>

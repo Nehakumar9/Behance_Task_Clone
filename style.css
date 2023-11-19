@@ -1,0 +1,56 @@
+:root{
+    --mainPink : #ef7998;
+    --mainYellow : rgb(249,228,148);
+    --mainBlack : #000;
+    --mainGrey : rgb(238,238,238);
+    --mainWhite: #fff;
+}
+.store{
+    background: var(--mainGrey);
+}
+.btn-black{
+    color:var(--mainBlack) !important;
+    border-color: var(--mainBlack) !important;
+}
+.btn-black:hover{
+    color:var(--mainPink) !important;
+    background: var(--mainBlack) !important;
+}
+.search-box{
+    background: var(--mainPink);
+    color: var(--mainBlack);
+}
+/* Add this CSS to make the search icon black */
+.search-icon-color {
+    color: black;
+}
+.img-container{
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.img-container:hover .store-item-icon{
+    transform: translate(0,0);
+}
+.store-item-icon:hover{
+    color: var(--mainWhite);
+}
+.store-img{
+    transition: all 1s ease-in-out;
+}
+.img-container:hover .store-img{
+    transform: scale(1.2);
+}
+    
+.store-like-button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.img-container:hover .store-like-button {
+    opacity: 1;
+    transform: translate(0, -50%);
+}
